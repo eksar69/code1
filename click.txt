@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Простой счетчик кликов</title>
+</head>
+<body>
+    <h1>Кликов: <span id="counter">0</span></h1>
+    <p>Кликайте в любом месте страницы</p>
+    <button onclick="resetCounter()">Сбросить</button>
+
+    <script>
+        let count = 0;
+        const counter = document.getElementById('counter');
+
+        document.addEventListener('click', function() {
+            count++;
+            counter.textContent = count;
+        });
+
+        function resetCounter() {
+            count = 0;
+            counter.textContent = count;
+        }
+    </script>
+</body>
+</html>
